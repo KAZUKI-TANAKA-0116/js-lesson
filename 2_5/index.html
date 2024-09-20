@@ -2,15 +2,29 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>coding</title>
-  <link rel="stylesheet" type="text/css" href="./base.css">
+  <title>if文</title>
+  <link rel="stylesheet" type="text/css" href="base.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  <script>
-  $(function(){
-
+   $(function(){
+    $('#button').on('click', function() {
+      var inputVal = $('#value').val();
+      if (inputVal === '1') {
+        $('#box').css('background-color', 'red');
+      } else if (inputVal === '2') {
+        $('#box').css('background-color', 'green');
+      } else if (inputVal === '3') {
+        $('#box').css('background-color', 'blue');
+      } else {
+        $('#box').css('background-color', '#aaa');
+      }
+    });
   });
   </script>
 </head>
 <body>
-  
+  <input type="text" id="value">
+  <input type="button" id="button" value="ボタン">
+  <div id="box">
+  </div><!-- button -->
 </body>
 </html>
